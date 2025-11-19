@@ -13,6 +13,7 @@ import {
   Shield,
   Code,
   BarChart3,
+  GitCompare,
   Sparkles,
   Github,
   Linkedin,
@@ -27,6 +28,13 @@ const tools = [
     description:
       "Parse and analyze Next.js build output to understand route sizes, bundle distribution, and get optimization recommendations.",
     icon: BarChart3,
+  },
+  {
+    name: "Text Diff Tool",
+    href: "/tools/text-diff",
+    description:
+      "Compare and visualize differences between two text inputs. See line-by-line changes with color-coded additions and deletions.",
+    icon: GitCompare,
   },
 ];
 

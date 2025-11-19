@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FileCode, Wrench, Sparkles } from "lucide-react";
+import { FileCode, GitCompare, Wrench, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -13,6 +13,13 @@ const tools = [
     icon: FileCode,
     description: "Analyze Next.js builds",
     color: "from-cyan-500 to-blue-500",
+  },
+  {
+    name: "Text Diff",
+    href: "/tools/text-diff",
+    icon: GitCompare,
+    description: "Compare text differences",
+    color: "from-purple-500 to-pink-500",
   },
 ];
 
@@ -33,8 +40,8 @@ export function Sidebar() {
             Developer utilities & analyzers
           </p>
         </div>
-        <ScrollArea className="flex-1 px-3 py-4">
-          <nav className="space-y-2">
+        <ScrollArea className="flex-1  py-4">
+          <nav className="space-y-2 px-3">
             {tools.map((tool) => {
               const isActive = pathname === tool.href;
               const Icon = tool.icon;
