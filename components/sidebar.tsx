@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FileCode, GitCompare, Wrench, Sparkles } from "lucide-react";
+import { FileCode, GitCompare, Code2, Wrench, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -20,6 +20,13 @@ const tools = [
     icon: GitCompare,
     description: "Compare text differences",
     color: "from-purple-500 to-pink-500",
+  },
+  {
+    name: "JSON to TypeScript",
+    href: "/tools/json-to-typescript",
+    icon: Code2,
+    description: "Convert JSON to TypeScript",
+    color: "from-green-500 to-emerald-500",
   },
 ];
 

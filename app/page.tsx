@@ -14,6 +14,7 @@ import {
   Code,
   BarChart3,
   GitCompare,
+  Code2,
   Sparkles,
   Github,
   Linkedin,
@@ -35,6 +36,13 @@ const tools = [
     description:
       "Compare and visualize differences between two text inputs. See line-by-line changes with color-coded additions and deletions.",
     icon: GitCompare,
+  },
+  {
+    name: "JSON to TypeScript Converter",
+    href: "/tools/json-to-typescript",
+    description:
+      "Convert JSON objects to TypeScript interfaces and types instantly. Generate type definitions from API responses, configuration files, or any JSON data.",
+    icon: Code2,
   },
 ];
 
