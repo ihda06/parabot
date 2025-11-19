@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://parabot.dev"),
+  metadataBase: new URL("https://parabot.vercel.app"),
   title: {
     default: "ParaBot - Free Online Developer Tools",
     template: "%s | ParaBot",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://parabot.dev",
+    url: "https://parabot.vercel.app",
     siteName: "ParaBot",
     title: "ParaBot - Free Online Developer Tools",
     description:
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://parabot.dev",
+    canonical: "https://parabot.vercel.app",
   },
   category: "developer tools",
   other: {
@@ -104,12 +104,12 @@ export default function RootLayout({
     name: "ParaBot",
     description:
       "Free online developer tools collection. Analyze, parse, format, and optimize your code",
-    url: "https://parabot.dev",
+    url: "https://parabot.vercel.app",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://parabot.dev/search?q={search_term_string}",
+        urlTemplate: "https://parabot.vercel.app/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },

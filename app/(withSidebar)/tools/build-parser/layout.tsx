@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description:
       "Free online tool to parse and analyze Next.js build output. Understand route sizes, bundle distribution, and get optimization recommendations.",
     type: "website",
-    url: "https://parabot.dev/tools/build-parser",
+    url: "https://parabot.vercel.app/tools/build-parser",
   },
   twitter: {
     card: "summary_large_image",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Free online tool to parse and analyze Next.js build output. Understand route sizes, bundle distribution, and get optimization recommendations.",
   },
   alternates: {
-    canonical: "https://parabot.dev/tools/build-parser",
+    canonical: "https://parabot.vercel.app/tools/build-parser",
   },
   robots: {
     index: true,
@@ -43,9 +43,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  authors: [
-    { name: "Ihda Anwari", url: "https://ihda-anwari.vercel.app/" },
-  ],
+  authors: [{ name: "Ihda Anwari", url: "https://ihda-anwari.vercel.app/" }],
   creator: "Ihda Anwari",
 };
 

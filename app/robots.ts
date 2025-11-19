@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://parabot.dev";
+  const baseUrl = "https://parabot.vercel.app";
 
   return {
     rules: [
@@ -19,4 +19,3 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
-

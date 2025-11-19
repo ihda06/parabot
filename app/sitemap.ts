@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://parabot.dev";
+  const baseUrl = "https://parabot.vercel.app";
 
   // Define all routes
   const routes = [
@@ -18,12 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/tools/build-parser`,
       lastModified: new Date(),
       changeFrequency: "weekly" as const,
@@ -33,4 +27,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes;
 }
-

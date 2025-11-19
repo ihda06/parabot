@@ -64,7 +64,7 @@ export default function Home() {
     name: "ParaBot",
     description:
       "Free online developer tools collection. Analyze, parse, format, and optimize your code. All tools run in your browser - no data sent to servers.",
-    url: "https://parabot.dev",
+    url: "https://parabot.vercel.app",
     author: {
       "@type": "Person",
       name: "Ihda Anwari",
@@ -85,7 +85,7 @@ export default function Home() {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://parabot.dev/search?q={search_term_string}",
+        urlTemplate: "https://parabot.vercel.app/search?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
