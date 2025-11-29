@@ -144,42 +144,10 @@ export function SideBySideDiff({ diffResult }: SideBySideDiffProps) {
         </div>
         <div className="grid grid-cols-2 font-mono text-sm">
           {sideBySideLines.map((line, index) => {
-            const leftBgColor =
-              line.left.type === "removed"
-                ? "bg-red-500/10 dark:bg-red-500/20"
-                : line.left.type === "unchanged"
-                ? "bg-transparent"
-                : "bg-muted/20";
-            const leftBorderColor =
-              line.left.type === "removed"
-                ? "border-l-4 border-red-500"
-                : "border-l-4 border-transparent";
-            const leftTextColor =
-              line.left.type === "removed"
-                ? "text-red-700 dark:text-red-300"
-                : "text-foreground";
-
-            const rightBgColor =
-              line.right.type === "added"
-                ? "bg-green-500/10 dark:bg-green-500/20"
-                : line.right.type === "unchanged"
-                ? "bg-transparent"
-                : "bg-muted/20";
-            const rightBorderColor =
-              line.right.type === "added"
-                ? "border-l-4 border-green-500"
-                : "border-l-4 border-transparent";
-            const rightTextColor =
-              line.right.type === "added"
-                ? "text-green-700 dark:text-green-300"
-                : "text-foreground";
-
             return (
               <div key={index} className="contents">
                 {/* Left side - Original */}
-                <div
-                  className={`${leftBgColor} ${leftBorderColor} ${leftTextColor} px-4 py-1 border-r border-border/50 flex items-start gap-4 hover:bg-opacity-20 transition-colors`}
-                >
+                <div className="px-4 py-1 border-r border-border/50 flex items-start gap-4">
                   <div className="shrink-0 w-12 text-right text-xs text-muted-foreground pt-0.5">
                     <Show when={!!line.left.lineNumber}>
                       {line.left.lineNumber}
@@ -195,11 +163,10 @@ export function SideBySideDiff({ diffResult }: SideBySideDiffProps) {
                         <span className="text-muted-foreground/50"> </span>
                       }
                     >
-                      {line.left.type === "removed" &&
-                      line.right.type === "added" ? (
+                      {line.left.type === "removed" ? (
                         <WordHighlight
                           oldText={line.left.content}
-                          newText={line.right.content}
+                          newText={line.right.content || ""}
                           type="removed"
                         />
                       ) : (
@@ -210,9 +177,7 @@ export function SideBySideDiff({ diffResult }: SideBySideDiffProps) {
                 </div>
 
                 {/* Right side - New */}
-                <div
-                  className={`${rightBgColor} ${rightBorderColor} ${rightTextColor} px-4 py-1 flex items-start gap-4 hover:bg-opacity-20 transition-colors`}
-                >
+                <div className="px-4 py-1 flex items-start gap-4">
                   <div className="shrink-0 w-12 text-right text-xs text-muted-foreground pt-0.5">
                     <Show when={!!line.right.lineNumber}>
                       {line.right.lineNumber}
@@ -230,10 +195,9 @@ export function SideBySideDiff({ diffResult }: SideBySideDiffProps) {
                         <span className="text-muted-foreground/50"> </span>
                       }
                     >
-                      {line.left.type === "removed" &&
-                      line.right.type === "added" ? (
+                      {line.right.type === "added" ? (
                         <WordHighlight
-                          oldText={line.left.content}
+                          oldText={line.left.content || ""}
                           newText={line.right.content}
                           type="added"
                         />
