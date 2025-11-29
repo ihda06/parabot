@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Text Diff Tool | ParaBot",
+  title: "Text Diff Tool",
   description:
     "Free online tool to compare and visualize differences between two text inputs. See line-by-line changes with color-coded additions and deletions. Perfect for comparing code, documents, or any text content.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "compare text",
   ],
   openGraph: {
-    title: "Text Diff Tool | ParaBot",
+    title: "Text Diff Tool",
     description:
       "Free online tool to compare and visualize differences between two text inputs. See line-by-line changes with color-coded additions and deletions.",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Text Diff Tool | ParaBot",
+    title: "Text Diff Tool",
     description:
       "Free online tool to compare and visualize differences between two text inputs. See line-by-line changes with color-coded additions and deletions.",
   },
